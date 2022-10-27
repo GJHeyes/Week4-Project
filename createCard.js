@@ -6,7 +6,7 @@ function createcard(card){
     top.setAttribute("id", card.id)
     //nametag.innerText = card.name
     if(switchedToPlayer){
-        top.src = "../src/pokemonCard.png"
+        top.src = "https://iili.io/bdmwPt.png" //../src/pokemonCard.png 
         top.classList.add("top")
         bottom.src = card.images.small
         bottom.classList.add("bottom")
