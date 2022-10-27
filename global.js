@@ -3,7 +3,6 @@
 
 const computerCards = document.querySelector("#computerCards")
 const playerCards = document.querySelector("#playerCards")
-const main = document.querySelector('#main')
 
 let playerDeck
 let computerDeck 
