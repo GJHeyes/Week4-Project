@@ -1,8 +1,10 @@
 body{
-    background-color: #de5239;
+    background-color: #bde673;
 }
-img{
+
+div img{
     width: 10vw;
+    transition: transform 0.5s;
 }
 
 #main{
@@ -17,55 +19,75 @@ img{
     align-items: center;
 }
 
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-}
-
-.pc{
-    background-color: #e63900;
-}
-.user{
-    background-color: #8b2900;
-}
-
-
-.card{
-    flex-direction: column;
-    display: flex;
-    justify-content: space-around;
-    align-self: center;
-    text-align: center;
-    margin: 5px;
-    width:fit-content;
-    font-size: 2vw;
-    /*border: 10px solid;
-    border-radius: 30px;*/
-}
-
-.player{
+.cardHolder.player{
     justify-content: flex-end;
     align-items: flex-end;
 }
 
-.buttonHolder{
+.cards{
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.cards.pc{
+    background-color: #5a9c4a;
+}
+
+.cards.user{
+    background-color: #415a20;
+}
+
+.card{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    position:relative;
+    display: flex;
+    align-self: center;
+    text-align: center;
+    margin: 5px;
+    font-size: 2vw;
+}
+
+img.bottom{
+    transform: rotateY(180deg) ;
+    backface-visibility: hidden;
+}
+
+img.top{
+    backface-visibility: hidden;
+    position: absolute
+}
+
+.card.human:hover{
+    transform: translateY(-25%);
+}
+
+img.bottom:hover{
+    transform: rotateY(180deg)translateY(25%);
+}
+
+img.top:hover{
+    transform: translateY(25%);
+}
+
+.is-flipped{
+   transform: rotateY(180deg);
+   transition: transform 1s;
 }
 
 .button{
     font-family: 'Pokemon Solid', sans-serif;
     position: fixed;
     top: 44%;
-    left: 25%;
     letter-spacing: 10px;
     padding: 5px;
-    background-color: #de5239;
-    color: #8b2900;
+    background-color: #bde673;
+    color: #9c8b31;
     font-size: 5vw;
     border: none;
-    width: 50vw;
+    width:100vw
 }
 
 
