@@ -1,0 +1,72 @@
+body{
+    background-color: #de5239;
+}
+img{
+    width: 10vw;
+}
+
+#main{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    height: 98vh;
+}
+
+.cardHolder{
+    display: flex;
+    align-items: center;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.pc{
+    background-color: #e63900;
+}
+.user{
+    background-color: #8b2900;
+}
+
+
+.card{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    text-align: center;
+    margin: 5px;
+    width:fit-content;
+    font-size: 2vw;
+    /*border: 10px solid;
+    border-radius: 30px;*/
+}
+
+.player{
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.buttonHolder{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button{
+    font-family: 'Pokemon Solid', sans-serif;
+    position: fixed;
+    top: 44%;
+    left: 25%;
+    letter-spacing: 10px;
+    padding: 5px;
+    background-color: #de5239;
+    color: #8b2900;
+    font-size: 5vw;
+    border: none;
+    width: 50vw;
+}
+
+
+
