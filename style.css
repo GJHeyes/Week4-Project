@@ -1,19 +1,10 @@
 body{
-    background-color: #de5239;
+    background-color: #bde673;
 }
 
 div img{
     width: 10vw;
-}
-
-img.bottom{
-    transform: rotateY(180deg) ;
-    backface-visibility: hidden;
-}
-
-img.top{
-    backface-visibility: hidden;
-    position: absolute
+    transition: transform 0.5s;
 }
 
 #main{
@@ -41,15 +32,15 @@ img.top{
 }
 
 .cards.pc{
-    background-color: #e63900;
+    background-color: #5a9c4a;
 }
 
 .cards.user{
-    background-color: #8b2900;
+    background-color: #415a20;
 }
 
 .card{
-    transition: transform 1s;
+    transition: transform 0.5s;
     transform-style: preserve-3d;
     position:relative;
     display: flex;
@@ -59,8 +50,31 @@ img.top{
     font-size: 2vw;
 }
 
+img.bottom{
+    transform: rotateY(180deg) ;
+    backface-visibility: hidden;
+}
+
+img.top{
+    backface-visibility: hidden;
+    position: absolute
+}
+
+.card.human:hover{
+    transform: translateY(-25%);
+}
+
+img.bottom:hover{
+    transform: rotateY(180deg)translateY(25%);
+}
+
+img.top:hover{
+    transform: translateY(25%);
+}
+
 .is-flipped{
-   transform: rotateY(180deg) 
+   transform: rotateY(180deg);
+   transition: transform 1s;
 }
 
 .button{
@@ -69,8 +83,8 @@ img.top{
     top: 44%;
     letter-spacing: 10px;
     padding: 5px;
-    background-color: #de5239;
-    color: #8b2900;
+    background-color: #bde673;
+    color: #9c8b31;
     font-size: 5vw;
     border: none;
     width:100vw

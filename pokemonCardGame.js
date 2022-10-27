@@ -89,7 +89,7 @@ function createcard(card){
     //let type = card.types[0] type of pokemon
     let id = card.id
 
-    div.classList.add(`card`, /*`${type.toLowerCase()}`*/)
+    
     top.setAttribute("id", id)
     //nametag.innerText = card.name
     if(switchedToPlayer){
@@ -98,8 +98,10 @@ function createcard(card){
         bottom.src = card.images.small
         bottom.classList.add("bottom")
         div.append(bottom)
+        div.classList.add(`card`, 'computer'/*`${type.toLowerCase()}`*/)
     }else{
         top.src = card.images.small
+        div.classList.add(`card`, 'human')
     }
     div.append(top)
     return div
