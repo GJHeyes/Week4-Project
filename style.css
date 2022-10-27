@@ -1,8 +1,19 @@
 body{
     background-color: #de5239;
 }
-img{
+
+div img{
     width: 10vw;
+}
+
+img.bottom{
+    transform: rotateY(180deg) ;
+    backface-visibility: hidden;
+}
+
+img.top{
+    backface-visibility: hidden;
+    position: absolute
 }
 
 #main{
@@ -17,6 +28,11 @@ img{
     align-items: center;
 }
 
+.cardHolder.player{
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
 .cards{
     display: flex;
     flex-wrap: wrap;
@@ -24,49 +40,40 @@ img{
     border-radius: 15px;
 }
 
-.pc{
+.cards.pc{
     background-color: #e63900;
-    
 }
-.user{
+
+.cards.user{
     background-color: #8b2900;
 }
 
-
 .card{
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position:relative;
     display: flex;
-    justify-content: space-around;
     align-self: center;
     text-align: center;
     margin: 5px;
-    width:fit-content;
     font-size: 2vw;
-    /*border: 10px solid;
-    border-radius: 30px;*/
 }
 
-.player{
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-.buttonHolder{
-    display: flex;
-    justify-content: space-evenly;
+.is-flipped{
+   transform: rotateY(180deg) 
 }
 
 .button{
     font-family: 'Pokemon Solid', sans-serif;
     position: fixed;
     top: 44%;
-    left: 25%;
     letter-spacing: 10px;
     padding: 5px;
     background-color: #de5239;
     color: #8b2900;
     font-size: 5vw;
     border: none;
-    width: 50vw;
+    width:100vw
 }
 
 
