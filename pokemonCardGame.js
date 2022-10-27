@@ -3,10 +3,12 @@
 const assignCardsButton = document.querySelector("#cardButton")
 const computerCards = document.querySelector("#computerCards")
 const playerCards = document.querySelector("#playerCards")
+const main = document.querySelector('#main')
 
 let playerDeck
 let computerDeck 
 let fullDeckOfCards;
+let modifiedDeck;
 let notClicked 
 let switchedToPlayer
 let numberOfCards = 6
@@ -33,6 +35,7 @@ let numberOfCards = 6
 async function cardLoad(){
     const response = await fetch(`https://api.pokemontcg.io/v2/cards`)
     const _data = await response.json()
+    modifiedDeck = _data.data
     fullDeckOfCards = _data.data
     assignCardsButton.innerText = "Start!"
 }
@@ -41,7 +44,7 @@ cardLoad()
 function reset(){
     playerDeck = {}
     computerDeck = {}
-    fullDeckOfCards;
+    modifiedDeck;
     notClicked = true
     switchedToPlayer = true
     computerCards.classList = ""
@@ -76,8 +79,8 @@ function cardPull(){
 function selectCards(){
     let deck = []
     for(let i = 0; i < numberOfCards; i++){
-        const cardNumber = Math.floor(Math.random()*fullDeckOfCards.length)
-        const card = fullDeckOfCards[cardNumber]
+        const cardNumber = Math.floor(Math.random()*modifiedDeck.length)
+        const card = modifiedDeck[cardNumber]
         deck.push(card)
         if(switchedToPlayer){
             computerCards.appendChild(createcard(card))
@@ -86,27 +89,40 @@ function selectCards(){
             playerCards.appendChild(createcard(card))
             playerCards.classList.add('cards','user')
         }
-        fullDeckOfCards = fullDeckOfCards.filter((i) => i.id !== card.id)
+        modifiedDeck = modifiedDeck.filter((i) => i.id !== card.id)
     }
     switchedToPlayer = false
     return deck
 }
-
 
 function createcard(card){
     const div = document.createElement("div")
     //const nametag = document.createElement('h2')
     const img = document.createElement("img")
     let type = card.types[0]
+    let id = card.id
 
     div.classList.add(`card`, `${type.toLowerCase()}`)
+    img.setAttribute("id", id)
     //nametag.innerText = card.name
     if(switchedToPlayer){
         img.src = "../src/pokemonCard.png"
+        img.classList.add("enemy")
     }else{
         img.src = card.images.small
+        img.classList.add("human")
     }
     
     div.append(img)
     return div
 }
+
+
+
+document.addEventListener('click', (e) =>{ //e for event
+    if(e.target.matches('.enemy')){
+        const card = e.target.closest('img') 
+        let testcard = (fullDeckOfCards.filter((i) => i.id === card.id))
+        card.src = testcard[0].images.small
+    }
+})

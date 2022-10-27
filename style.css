@@ -21,10 +21,12 @@ img{
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
+    border-radius: 15px;
 }
 
 .pc{
     background-color: #e63900;
+    
 }
 .user{
     background-color: #8b2900;
@@ -32,7 +34,6 @@ img{
 
 
 .card{
-    flex-direction: column;
     display: flex;
     justify-content: space-around;
     align-self: center;
