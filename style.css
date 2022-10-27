@@ -70,3 +70,34 @@ img{
 
 
 
+
+/* Tim's Code*/
+
+*{border: solid black}
+
+.crdPrpContainer{
+    border: solid black;
+    text-align: center;
+    margin: 5px;
+    width:fit-content;
+    
+    
+}
+
+
+.crdPrpContainer1{
+    position:fixed;
+    top: 31%;
+    left: 5%;
+}
+.crdPrpContainer2{
+    position:fixed;
+    top: 31%;
+    left: 70%;
+}
+
+#pointsSection{
+
+}
+
+/**Tim's Code /
