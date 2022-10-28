@@ -25,6 +25,8 @@ div img{
 
 .cardHolder.computer{
     justify-content: flex-end;
+    position: fixed;
+    right: 10px
 }
 
 .cards{
@@ -86,16 +88,18 @@ img.top{
     font-family: 'Pokemon Solid', sans-serif;
     position: fixed;
     top: 44%;
+    left: 40%;
     letter-spacing: 10px;
     padding: 5px;
     background-color: #bde673;
     color: #9c8b31;
     font-size: 5vw;
     border: none;
-    width:100vw
+
 }
 
 /*Chart CSS*/
+
 
 .container {
     width: 50vw;
@@ -106,18 +110,18 @@ img.top{
     align-items: center;
 }
 
-p {
-    position: absolute;
-    font-size: 50px;
-    color: crimson;
-}
-
  
 .flex-container {
-    width: 50vw;
+    width: 25vw;
+    position: fixed;
+    top: 85px;
+    left: 30px;
+
+
 }
 
-    /*flex-direction: ;
-
+.hidden {
+    display: none;
+}
 
 
