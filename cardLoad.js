@@ -5,3 +5,4 @@ async function cardLoad(){
     modifiedDeck = _data.data
     assignCardsButton.innerText = "Start!"
 }
+

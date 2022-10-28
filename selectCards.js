@@ -4,7 +4,7 @@ function selectCards(){
         const cardNumber = Math.floor(Math.random()*modifiedDeck.length)
         const card = modifiedDeck[cardNumber]
         deck.push(card)
-        if(switchedToPlayer){
+        if(stackingComputerDeck){
             computerCards.appendChild(createcard(card))
             computerCards.classList.add('cards','pc')
         }else{
@@ -13,6 +13,6 @@ function selectCards(){
         }
         modifiedDeck = modifiedDeck.filter((i) => i.id !== card.id)
     }
-    switchedToPlayer = false
+    stackingComputerDeck = false
     return deck
 }
