@@ -1,8 +1,8 @@
 let scored = false
+
 document.addEventListener('click', (e) =>{ //e for event
     let cardId = e.target.parentNode.id
     let cardClass = e.target.parentNode.classList
-
     if(cardClass[1] === "human" && playerSelect.length === 0) {
         for(let i = 0; i < playerDeck.length; i++){
             if(playerDeck[i].id === cardId){
@@ -18,20 +18,28 @@ document.addEventListener('click', (e) =>{ //e for event
         }
     }
     if(computerSelect.length === 1 && playerSelect.length ===1 && scored === false){
-        if(computerSelect[0].hp > playerSelect[0].hp){
+        let computerHealth = Number(computerSelect[0].hp)
+        let playerHealth = Number(playerSelect[0].hp)
+        if(computerHealth > playerHealth){
             computerScore++
+            result.innerText = "Computer Wins!"
 
-        }else if(computerSelect[0].hp === playerSelect[0].hp){
+        }else if(computerHealth === playerHealth){
             computerScore++
             playerScore++
+            result.innerText = "Draw!"
         }else{
-            playerScore++
+            playerScore++//h2 inner text
+            result.innerText = "You Win!"
         }  
-        console.log("player Score" + playerScore + "  " + "computer Score" + computerScore)
         scored = true
         playerDeck = playerDeck.filter((i) => i.id !== playerSelect[0].id)
         computerDeck = computerDeck.filter((i) => i.id !== computerSelect[0].id)
-        test()
+        assignCardsButton.classList.add('hidden')
+        playScore.innerText= playerScore
+        compScore.innerText= computerScore
+        updateScore()
+        removeCard()
     }
 })
 
@@ -39,12 +47,23 @@ function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
   }
   
-async function test() {
+async function removeCard() {
     await delay(1500);
     document.getElementById(computerSelect[0].id).remove()
     document.getElementById(playerSelect[0].id).remove()
+    if(playerDeck.length === 0 && computerDeck.length === 0){
+        computerCards.classList.add('hidden')
+        playerCards.classList.add('hidden')
+    }
+    result.innerText = ""
+    assignCardsButton.classList.remove('hidden')
     computerSelect = []
     playerSelect = []
     flip = false
     scored = false
+   
+    //h2 innertext  = ""
 }
+
+
+
