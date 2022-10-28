@@ -10,6 +10,7 @@ assignCardsButton.addEventListener('click', (event)=>{
         compChart.classList.remove("hidden")
         if(notClicked){
             assignCardsButton.innerText = "Reset?"
+            assignCardsButton.classList.add('hidden')
             notClicked = false
             deskAssign()
         }else{
