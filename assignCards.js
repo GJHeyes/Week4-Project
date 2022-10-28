@@ -11,5 +11,4 @@ assignCardsButton.addEventListener('click', (event)=>{
             reset()
         }
     }
-    cards = document.querySelectorAll('.card')
 })

@@ -9,7 +9,7 @@ let computerDeck
 let fullDeck 
 let modifiedDeck;
 let notClicked = true
-let switchedToPlayer = true
+let stackingComputerDeck = true
 let numberOfCards = 6
 
 cardLoad()
@@ -32,6 +32,8 @@ cardLoad()
     
     //data
 })*/
+
+//on flip change colour of opponents background colour based on type
 
 
 

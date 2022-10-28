@@ -5,7 +5,7 @@ function createcard(card){
     //let type = card.types[0] type of pokemon
     top.setAttribute("id", card.id)
     //nametag.innerText = card.name
-    if(switchedToPlayer){
+    if(stackingComputerDeck){
         top.src = "https://iili.io/bdmwPt.png" //../src/pokemonCard.png 
         top.classList.add("top")
         bottom.src = card.images.small

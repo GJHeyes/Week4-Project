@@ -3,7 +3,7 @@ function reset(){
     computerDeck = {}
     modifiedDeck = JSON.parse(JSON.stringify(fullDeck))
     notClicked = true
-    switchedToPlayer = true
+    stackingComputerDeck = true
     computerCards.classList = ""
     playerCards.classList = ""
     while (computerCards.hasChildNodes() && playerCards.hasChildNodes()) {
