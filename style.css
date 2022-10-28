@@ -20,8 +20,11 @@ div img{
 }
 
 .cardHolder.player{
-    justify-content: flex-end;
     align-items: flex-end;
+}
+
+.cardHolder.computer{
+    justify-content: flex-end;
 }
 
 .cards{
@@ -65,7 +68,7 @@ img.top{
 }
 
 img.bottom:hover{
-    transform: rotateY(180deg)translateY(25%);
+    transform: rotateY(180deg) translateY(25%);
 }
 
 img.top:hover{
@@ -89,6 +92,30 @@ img.top:hover{
     border: none;
     width:100vw
 }
+
+/*Chart CSS*/
+
+.container {
+    width: 50vw;
+    height: 20vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    position: absolute;
+    font-size: 50px;
+    color: crimson;
+}
+
+ 
+.flex-container {
+    width: 50vw;
+}
+
+    /*flex-direction: ;
 
 
 
