@@ -41,10 +41,6 @@ document.addEventListener('click', (e) =>{ //e for event
         updateScore()
         removeCard()
     }
-    if(playerDeck.length === 0 && computerDeck.length === 0){
-        computerCards.classList.add('hidden')
-        playerCards.classList.add('hidden')
-    }
 })
 
 function delay(time) {
@@ -55,12 +51,17 @@ async function removeCard() {
     await delay(1500);
     document.getElementById(computerSelect[0].id).remove()
     document.getElementById(playerSelect[0].id).remove()
+    if(playerDeck.length === 0 && computerDeck.length === 0){
+        computerCards.classList.add('hidden')
+        playerCards.classList.add('hidden')
+    }
     result.innerText = ""
     assignCardsButton.classList.remove('hidden')
     computerSelect = []
     playerSelect = []
     flip = false
     scored = false
+   
     //h2 innertext  = ""
 }
 
