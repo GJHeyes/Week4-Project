@@ -110,3 +110,43 @@ function createcard(card){
     div.append(img)
     return div
 }
+const myChart = new Chart(
+    document.getElementById('mychart'),
+        lables ['winner','looser','draw'], //points?
+        datasets [{
+            label: 'who is the winner',
+            data:[1,2,3,4,5,6             
+            ],
+            //backgroundColor: 'green'
+            backgroundColor:[
+                'red',
+                'blue',
+                'yellow'
+            ]
+
+        }], 
+);
+const lables = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+];
+
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'My First dataset',
+    backgroundColor: 'rgb(255, 99, 132)',
+    borderColor: 'rgb(255, 99, 132)',
+    data: [0, 10, 5, 2, 20, 30, 45],
+  }]
+};
+
+const config = {
+  type: 'line',
+  data: data,
+  options: {}
+};

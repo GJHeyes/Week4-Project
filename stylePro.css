@@ -1,0 +1,21 @@
+.container {
+    width: 50vw;
+    height: 20vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    position: absolute;
+    font-size: 50px;
+    color: crimson;
+}
+
+ 
+.flex-container {
+    width: 50vw;
+}
+
+    /*flex-direction: ;
