@@ -35,11 +35,22 @@ document.addEventListener('click', (e) =>{ //e for event
         scored = true
         playerDeck = playerDeck.filter((i) => i.id !== playerSelect[0].id)
         computerDeck = computerDeck.filter((i) => i.id !== computerSelect[0].id)
-        assignCardsButton.classList.add('hidden')
         playScore.innerText= playerScore
         compScore.innerText= computerScore
         updateScore()
         removeCard()
+
+        if(playerDeck.length === 0 && computerDeck.length === 0){
+            if(computerScore > playerScore){
+                result.innerText = "Computer Won The Match!"
+            }
+            else if(computerScore === playerScore){
+                result.innerText = "Draw!"
+            }else{
+                result.innerText = "You Won The Match!"
+            } 
+        }
+        
     }
 })
 
@@ -54,9 +65,9 @@ async function removeCard() {
     if(playerDeck.length === 0 && computerDeck.length === 0){
         computerCards.classList.add('hidden')
         playerCards.classList.add('hidden')
+        assignCardsButton.classList.remove('hidden')
     }
     result.innerText = ""
-    assignCardsButton.classList.remove('hidden')
     computerSelect = []
     playerSelect = []
     flip = false
