@@ -1,11 +1,19 @@
 //const searchButton = document.querySelector("#searchButton")
+
+//const GameStats = require("./GameStats")
+
 //const searchForm = document.querySelector("#search-bar")
 const assignCardsButton = document.querySelector("#cardButton")
 const computerCards = document.querySelector("#computerCards")
 const playerCards = document.querySelector("#playerCards")
 const body = document.querySelector("body")
 const maindiv = document.querySelector("#main")
-const pointsSection = document.querySelector("#pointsSection")
+const pointsSection1 = document.querySelector("#pointsSection1")
+const pointsSection2 = document.querySelector("#pointsSection2")
+
+const playerCollection = []
+const computerCollection = []
+
 
 let playerDeck
 let computerDeck 
@@ -70,6 +78,7 @@ async function cardLoad(){
 //cardLoad()
 
 function reset(){
+    
     playerDeck = {}
     computerDeck = {}
     fullDeckOfCards;
@@ -81,6 +90,8 @@ function reset(){
         computerCards.removeChild(computerCards.firstChild)
         playerCards.removeChild(playerCards.firstChild)
     }
+    pointsSection1.innerText =""
+    pointsSection2.innerText =""
 }
 //reset()
 
@@ -104,104 +115,150 @@ assignCardsButton.addEventListener('click', (event)=>{
 function cardPull(){
     computerDeck = selectCards()
     playerDeck = selectCards()
+
+    pointsSection1.innerText =""
+    pointsSection2.innerText =""
     
     console.log(playerDeck[0])        
     console.log(computerDeck[0])
 
+}
 
+
+
+
+//pop deck by card id
+function popDeck(xID, xDeck, xCollection){
+    let xIndex
+    switch (xDeck.toLowerCase()){
+        case('full deck'):        
+        for(const item of fullDeckOfCards){
+            if(item.id === xID){
+                    //push card to target collection
+                    xCollection.toLowerCase() === 'player collection' ? playerCollection.push(item) : computerCollection.push(item)
+                    xIndex = fullDeckOfCards.indexOf(item)                
+                    fullDeckOfCards.splice(xIndex,1) //remove card from full deck
+                    break;
+                }
+            };
+        break;
+        case('computer deck'):
+        for(const item of computerDeck){
+            if(item.id === xID){
+                xCollection.toLowerCase() === 'player collection' ? playerCollection.push(item) : computerCollection.push(item)
+                xIndex = computerDeck.indexOf(item)                
+                computerDeck.splice(xIndex,1) //remove card from computer deck
+                break;
+            }
+        };
+        break;
+        case('player deck'):
+        for(const item of playerDeck){
+            if(item.id === xID){
+                xCollection.toLowerCase() === 'player collection' ? playerCollection.push(item) : computerCollection.push(item)
+                xIndex = playerDeck.indexOf(item)                
+                playerDeck.splice(xIndex,1) //remove card from player deck
+                break;
+            }
+        }
+        break;         
+    }      
 
 }
 
 
 function gameOutcome(){
-    //resultMsg = document.createElement('p')
-    //resultMsg.innerText(gmResult)
+ 
+
+    if(Number(playerDeck[0].hp) > Number(modifiedDeck[0].hp)){        
+        console.log('player wins!')
+
+        gmResult = 'player wins!' 
+        playerPoints.innerText = `(P) Img ID : ${playerDeck[0].id}, HP: ${playerDeck[0].hp}`
+        computerPoints.innerText = `(C) Img ID : ${modifiedDeck[0].id}, HP: ${modifiedDeck[0].hp}`        
+        
+       popDeck(modifiedDeck[0].id, 'computer deck', 'player collection') //remove card from computer deck, move to player collection
+       popDeck(playerDeck[0].id, 'player deck', 'player collection') //remove card from computer deck, move to player collection
+       //popDeck(modifiedDeck[0].id, 'full deck', 'player collection') //remove card from full deck and move to player collection
+        
+    } else if(Number(playerDeck[0].hp) === Number(modifiedDeck[0].hp)){
+        console.log('draw!')
+        
+        gmResult = 'draw!'
+        playerPoints.innerText = `(P) Img ID : ${playerDeck[0].id}, HP: ${playerDeck[0].hp}`
+        computerPoints.innerText = `(C) Img ID : ${modifiedDeck[0].id}, HP: ${modifiedDeck[0].hp}`
+
+        popDeck(modifiedDeck[0].id, 'computer deck', 'computer collection') //remove card from computer deck, move to computer collection
+        popDeck(playerDeck[0].id, 'player deck', 'player collection') //remove card from player deck, move to player collection
+
+        }else {        
+        console.log('computer wins!')
+
+        gmResult = 'computer wins!',
+        computerPoints.innerText = `(C) Img ID : ${modifiedDeck[0].id}, HP: ${modifiedDeck[0].hp}`
+        playerPoints.innerText = `(P) Img ID : ${playerDeck[0].id}, HP: ${playerDeck[0].hp}`        
+        
+        popDeck(playerDeck[0].id, 'player deck', 'computer collection') //remove card from player deck, move to computer collection        
+        popDeck(modifiedDeck[0].id, 'computer deck', 'computer collection') //remove card from computer deck, move to computer collection
+
+         
+    }
+
+    //display
+    pointsSection1.innerText = 'Player'
+    pointsSection2.innerText = 'Computer'
+    pointsSection1.append(playerPointsContainer)
+    pointsSection2.append(computerPointsContainer)
+
     assignCardsButton.innerText = gmResult
 }
 
 
 //card event listener
 document.addEventListener('click', (e) =>{ //e for event
-    reset//
-    modifiedDeck = []  
-  
-  
-    //body.removeChild(computerCardPropertiesContainer)
+    reset
+    modifiedDeck = []           
 
     if(e.target.matches('.card-img')){
-        console.log('target')
-        console.log(e.target)
+        
+        // identify the computer card which the user clicked
         const card = e.target.closest('img') 
-        //const img = e.target
+        //const img = e.target        
+            
         
-    
-        //modifiedDeck = fullDeckOfCards.filter(i => i.id === card.id)// ???? Why don't you work - what's your ask ???
-        
-        // centuries later...the for loop enters the stage
+        //push the card to a filtered deck - 'modifiedDeck[]'
         for(const item of computerDeck){
             if(item.id === card.id){
-                console.log('item')
-                console.log(item.id)
+                //console.log('item')
+                //console.log(item.id)
                 modifiedDeck.push(item)
             }
         }
-        
-        console.log('computer card id')
-        console.log(card.id)            
-        
-        console.log('modified deck')
-        console.log(modifiedDeck)
-         
-
-        let test = playerPointsContainer
-        if(test === document.querySelector("#crdPrpContainer1")){
-            console.log('query worked')
-        } else {
-            console.log('query did not work')
-            console.log('')
-        }
-
-        // compare user and computer deck
+          
+        // * debug compare user and computer deck
         console.log('player img id '+ playerDeck[0].id)
         console.log('player hp '+ playerDeck[0].hp)        
         console.log('computer hp '+ modifiedDeck[0].hp)
-        console.log('computer img id '+ modifiedDeck[0].id)
-        //console.log(img)
-        
-        
-        
-        if(Number(playerDeck[0].hp) > Number(modifiedDeck[0].hp)){        
-            console.log('player wins!')
+        console.log('computer img id '+ modifiedDeck[0].id)     
+        console.log(modifiedDeck)
 
-            gmResult = 'player wins!' 
-            playerPoints.innerText = `Player Img ID : ${playerDeck[0].id}, HP: ${playerDeck[0].hp}`
-            computerPoints.innerText = `Computer Img ID : ${modifiedDeck[0].id}, HP: ${modifiedDeck[0].hp}`
-            
-        } else if(Number(playerDeck[0].hp) === Number(modifiedDeck[0].hp)){
-            console.log('draw!')
-            
-            gmResult = 'draw!'
-            playerPoints.innerText = `Player Img ID : ${playerDeck[0].id}, HP: ${playerDeck[0].hp}`
-            computerPoints.innerText = `Computer Img ID : ${modifiedDeck[0].id}, HP: ${modifiedDeck[0].hp}`
-
-            }else {        
-            console.log('computer wins!')
-
-            gmResult = 'computer wins!',
-            computerPoints.innerText = `Computer Img ID : ${modifiedDeck[0].id}, HP: ${modifiedDeck[0].hp}`
-            playerPoints.innerText = `Player Img ID : ${playerDeck[0].id}, HP: ${playerDeck[0].hp}`
-             
-        }
-        pointsSection.append(playerPointsContainer)
-        pointsSection.append(computerPointsContainer)
-
+        //determine game outcome
         gameOutcome()
 
-        //let testcard = (fullDeckOfCards.filter((i) => i.id === card.id))
-        //card.src = testcard[0].images.small
+        console.log('player deck')
+        console.log(playerDeck)
+        console.log('computer deck')
+        console.log(computerDeck)
+
+        console.log('player collection')
+        console.log(playerCollection)
+        console.log('computer collection')
+        console.log(computerCollection)
+
+        console.log('..................')
+        console.log('..................')
     }
 })
-
 
 
 

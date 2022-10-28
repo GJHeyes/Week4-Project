@@ -65,7 +65,9 @@ img{
     color: #8b2900;
     font-size: 5vw;
     border: none;
-    width: 50vw;
+    /*width: 50vw;*/
+    width:fit-content;
+    
 }
 
 
@@ -76,11 +78,10 @@ img{
 *{border: solid black}
 
 .crdPrpContainer{
-    border: solid black;
+    border: solid green;
     text-align: center;
     margin: 5px;
-    width:fit-content;
-    
+    width:fit-content;    
     
 }
 
@@ -96,8 +97,23 @@ img{
     left: 70%;
 }
 
-#pointsSection{
 
+
+.pointsSection{
+    position:fixed;
+    width:fit-content;
+    top:32%;    
+}
+
+#pointsSection1{
+    position:fixed;    
+    left: 2%;
+    border-color: red;
+}
+#pointsSection2{
+    position:fixed;    
+    left: 75%;
+    border-color: red;
 }
 
 /**Tim's Code /
