@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="createCard.js" defer></script>
     <script src="cardLoad.js" defer></script>
-    <script src="chart.js" defer></script>
     <script src="assignCardsButton.js" defer></script>
     <script src="deckAssign.js" defer></script>
     <script src="selectCards.js" defer></script>
     <script src="isFlipped.js" defer></script>
     <script src="reset.js" defer></script>
+    <script src="battle.js" defer></script>
+    <script src="chart.js" defer></script>
     <script src="global.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
@@ -29,6 +30,11 @@
 
     
     <div id="main">
+        <div class = "hidden" id="Bar"><div class = "flex-container">
+        
+            <!-- <p>Donut chart</p> -->
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div></div>
         <div class="cardHolder computer">
             <div id="computerCards">
             </div>
@@ -39,12 +45,6 @@
             </div>
         </div>
     </div>
-
-    <div class="flex-container">
-        <!-- <p>Donut chart</p> -->
-        <canvas id="myChart" width="400" height="400"></canvas>
-    </div>
-
     <script src =  "chart.js"></script>
 </body>
 </html>

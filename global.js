@@ -11,6 +11,11 @@ let modifiedDeck;
 let notClicked = true
 let stackingComputerDeck = true
 let numberOfCards = 6
+let playerSelect = []
+let computerSelect = []
+let playerScore = 0
+let computerScore = 0
+let flip = false
 
 cardLoad()
 
