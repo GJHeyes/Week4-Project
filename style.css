@@ -20,8 +20,13 @@ div img{
 }
 
 .cardHolder.player{
-    justify-content: flex-end;
     align-items: flex-end;
+}
+
+.cardHolder.computer{
+    justify-content: flex-end;
+    position: fixed;
+    right: 10px
 }
 
 .cards{
@@ -60,35 +65,63 @@ img.top{
     position: absolute
 }
 
-.card.human:hover{
-    transform: translateY(-25%);
-}
-
-img.bottom:hover{
-    transform: rotateY(180deg)translateY(25%);
-}
-
-img.top:hover{
-    transform: translateY(25%);
-}
-
 .is-flipped{
-   transform: rotateY(180deg);
-   transition: transform 1s;
+    transform: rotateY(180deg);
+    transition: transform 1s;
+ }
+
+.is-flipped:hover{
+    transform: translateY(25%) rotateY(180deg);
 }
+  
+.is-not-flipped:hover{
+    transform: translateY(25%)
+}
+
+.card.human:hover{
+    transform: translateY(-25%)
+}
+   
+
 
 .button{
     font-family: 'Pokemon Solid', sans-serif;
     position: fixed;
     top: 44%;
+    left: 40%;
     letter-spacing: 10px;
     padding: 5px;
     background-color: #bde673;
     color: #9c8b31;
     font-size: 5vw;
     border: none;
-    width:100vw
+
 }
 
+/*Chart CSS*/
+
+
+.container {
+    width: 50vw;
+    height: 20vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
+.flex-container {
+    width: 25vw;
+    position: fixed;
+    top: 85px;
+    left: 30px;
+
+
+}
+
+.hidden {
+    display: none;
+}
 
 

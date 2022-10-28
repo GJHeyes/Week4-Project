@@ -11,9 +11,12 @@
     <script src="selectCards.js" defer></script>
     <script src="isFlipped.js" defer></script>
     <script src="reset.js" defer></script>
+    <script src="battle.js" defer></script>
+    <script src="chart.js" defer></script>
     <script src="global.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Pokémon Card Game</title>
 </head>
 <body>
@@ -27,7 +30,12 @@
 
     
     <div id="main">
-        <div class="cardHolder">
+        <div class = "hidden" id="Bar"><div class = "flex-container">
+        
+            <!-- <p>Donut chart</p> -->
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div></div>
+        <div class="cardHolder computer">
             <div id="computerCards">
             </div>
         </div>
@@ -37,5 +45,6 @@
             </div>
         </div>
     </div>
+    <script src =  "chart.js"></script>
 </body>
 </html>

@@ -6,6 +6,9 @@ function reset(){
     stackingComputerDeck = true
     computerCards.classList = ""
     playerCards.classList = ""
+    playerScore = 0
+    computerScore = 0
+    chart.classList.add("hidden")
     while (computerCards.hasChildNodes() && playerCards.hasChildNodes()) {
         computerCards.removeChild(computerCards.firstChild)
         playerCards.removeChild(playerCards.firstChild)
