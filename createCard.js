@@ -1,3 +1,4 @@
+
 function createcard(card){
     const div = document.createElement("div")
     const top = document.createElement("img")

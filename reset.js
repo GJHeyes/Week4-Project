@@ -8,8 +8,14 @@ function reset(){
     playerCards.classList = ""
     playerScore = 0
     computerScore = 0
-    chart.classList.add("hidden")
-    while (computerCards.hasChildNodes() && playerCards.hasChildNodes()) {
+    playerChartHolder.classList.add("hidden")
+    computerChartHolder.classList.add("hidden")
+    playScore.innerText= playerScore
+    compScore.innerText= computerScore
+    computerCards.classList.remove('hidden')
+    playerCards.classList.remove('hidden')
+    updateScore()
+    while (computerCards.hasChildNodes() && computerCards.hasChildNodes()) {
         computerCards.removeChild(computerCards.firstChild)
         playerCards.removeChild(playerCards.firstChild)
     }
