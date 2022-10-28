@@ -76,6 +76,12 @@ img.top{
     transform: translateY(25%)
 }
 
+.card.human:hover{
+    transform: translateY(-25%)
+}
+   
+
+
 .button{
     font-family: 'Pokemon Solid', sans-serif;
     position: fixed;
