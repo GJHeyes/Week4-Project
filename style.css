@@ -90,7 +90,8 @@ img.top:hover{
     color: #9c8b31;
     font-size: 5vw;
     border: none;
-    width:100vw
+    left: 40%;
+    height: 1%;
 }
 
 /*Chart CSS*/
@@ -104,18 +105,19 @@ img.top:hover{
     align-items: center;
 }
 
-p {
-    position: absolute;
-    font-size: 50px;
-    color: crimson;
-}
-
  
 .flex-container {
-    width: 50vw;
+    width: 25vw;
+    position: fixed;
+    top: 10px;
+    left: 30px;
+
+
 }
 
-    /*flex-direction: ;
+.hidden {
+    display: none;
+}
 
 
 

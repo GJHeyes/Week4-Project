@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="createCard.js" defer></script>
     <script src="cardLoad.js" defer></script>
-    <script src="assignCardsButton.js" defer></script>
+    <script src="assignCardsButton.js" defer></script> 
+    <script src="chart.js" defer></script>
     <script src="deckAssign.js" defer></script>
     <script src="selectCards.js" defer></script>
     <script src="isFlipped.js" defer></script>
@@ -14,23 +15,7 @@
     <script src="global.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
-    <link rel="stylesheet" href="stylePro.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Document</title>
-
-</head>
-
-<body>
-    <div class="flex-container">
-        <!-- <p>Donut chart</p> -->
-        <canvas id="myChart" width="400" height="400"></canvas>
-        
-    </div>
-
-    <script src =  "danielle.js"></script>
-</body>
-</html>
-
     <title>Pokémon Card Game</title>
 </head>
 <body>
@@ -44,7 +29,13 @@
 
     
     <div id="main">
+        <div class = "hidden" id="Bar"><div class = "flex-container">
+        
+            <!-- <p>Donut chart</p> -->
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div></div>
         <div class="cardHolder computer">
+    
             <div id="computerCards">
             </div>
         </div>
@@ -55,10 +46,7 @@
         </div>
     </div>
 
-    <div class="flex-container">
-        <!-- <p>Donut chart</p> -->
-        <canvas id="myChart" width="400" height="400"></canvas>
-    </div>
+   
 
     <script src =  "chart.js"></script>
 </body>
