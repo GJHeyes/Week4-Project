@@ -1,5 +1,5 @@
 body{
-    background-color: #bde673;
+    background-color: #627bc5;
 }
 
 div img{
@@ -20,7 +20,10 @@ div img{
 }
 
 .cardHolder.player{
-    align-items: flex-end;
+    justify-content: flex-end;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
 }
 
 .cardHolder.computer{
@@ -37,11 +40,11 @@ div img{
 }
 
 .cards.pc{
-    background-color: #5a9c4a;
+    background-color: #31414a;
 }
 
 .cards.user{
-    background-color: #415a20;
+    background-color: #29416a;
 }
 
 .card{
@@ -86,18 +89,57 @@ img.top{
 
 .button{
     font-family: 'Pokemon Solid', sans-serif;
-    position: fixed;
-    top: 44%;
-    left: 40%;
+    position: fixed; 
+    top:45%;
+    left:40%;
     letter-spacing: 10px;
     padding: 5px;
-    background-color: #bde673;
-    color: #9c8b31;
+    background-color: #627bc5;
+    color: #d5eef6;
     font-size: 5vw;
     border: none;
 
 }
 
+#result{
+    font-family: 'Pokemon Solid', sans-serif;
+    align-self: center;
+    justify-self: center;
+
+    color: #d5eef6;
+    transition: transform 1s;
+    font-size: 6vw;
+    letter-spacing: 10px;
+}
+
+#textHolder{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+}
+
+h2{
+    font-family: 'Pokemon Solid', sans-serif; 
+    display: flex;
+    font-size: 2vw;
+    border: none;
+    margin:none;
+    padding:none;
+}
+#humanScore{
+    position: relative;
+    left: 49%;
+    color: #31414a;
+}
+
+#computerScore{
+    position: relative;
+    left: 49%;
+    color: #31414a;
+}
 /*Chart CSS*/
 
 
@@ -110,14 +152,23 @@ img.top{
     align-items: center;
 }
 
+#computerChart{
+    transform: rotateX(180deg)
+}
+
  
-.flex-container {
+.computer-container {
     width: 25vw;
     position: fixed;
-    top: 85px;
-    left: 30px;
+    top: 10px;
+    left: 20px;
+}
 
-
+.human-container {
+    width: 25vw;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
 }
 
 .hidden {

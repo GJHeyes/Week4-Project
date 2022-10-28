@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="createCard.js" defer></script>
+    <script src="global.js" defer></script>
     <script src="cardLoad.js" defer></script>
+    <script src="createCard.js" defer></script>
     <script src="assignCardsButton.js" defer></script>
     <script src="deckAssign.js" defer></script>
     <script src="selectCards.js" defer></script>
@@ -13,38 +14,41 @@
     <script src="reset.js" defer></script>
     <script src="battle.js" defer></script>
     <script src="chart.js" defer></script>
-    <script src="global.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js" integrity="sha512-Tfw6etYMUhL4RTki37niav99C6OHwMDB2iBT5S5piyHO+ltK2YX8Hjy9TXxhE1Gm/TmAV0uaykSpnHKFIAif/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Pokémon Card Game</title>
 </head>
 <body>
-    <!--<nav id="nav">
-        <form id="search-bar">
-        <label for="info"></label>
-        <input type="text" name="info" id="info" class="search" placeholder="Search...">
-        <button type="submit" id="searchButton" class="search" name="search">Search</button>
-        </form>
-    </nav>-->
-
-    
     <div id="main">
-        <div class = "hidden" id="Bar"><div class = "flex-container">
-        
+        <div class = "hidden" id="computerChartHolder">
+            <div class = "computer-container">
+                <h2 id="computerScore"></h2>
             <!-- <p>Donut chart</p> -->
-            <canvas id="myChart" width="400" height="400"></canvas>
-        </div></div>
+            <canvas id="computerChart" width="400" height="400"></canvas>
+            </div>
+        </div>
         <div class="cardHolder computer">
             <div id="computerCards">
             </div>
         </div>
-            <button type="submit" id="cardButton" class="button">Loading...</button>
+        <button type="submit" id="cardButton" class="button">Loading...</button>
+        <div id="textHolder">
+            <h1 id="result"></h1>
+        </div>
         <div class="cardHolder player">
             <div id="playerCards">
             </div>
         </div>
+        <div class = "hidden" id="playerChartHolder">
+            <div class = "human-container">
+            
+            <!-- <p>Donut chart</p> -->
+            <canvas id="playerChart" width="400" height="400"></canvas>
+            <h2 id="humanScore"></h2>
+            </div>
+        </div>
     </div>
-    <script src =  "chart.js"></script>
 </body>
 </html>
