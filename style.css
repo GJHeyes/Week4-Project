@@ -53,6 +53,10 @@ div img{
     font-size: 2vw;
 }
 
+img.bottom:hover{
+    transform: rotateY(180deg) translateY(25%);
+}
+
 img.bottom{
     transform: rotateY(180deg) ;
     backface-visibility: hidden;
@@ -63,21 +67,12 @@ img.top{
     position: absolute
 }
 
-.card.human:hover{
-    transform: translateY(-25%);
+.is-flipped:hover{
+    transform: translateY(25%) rotateY(180deg);
 }
-
-img.bottom:hover{
-    transform: rotateY(180deg) translateY(25%);
-}
-
-img.top:hover{
-    transform: translateY(25%);
-}
-
-.is-flipped{
-   transform: rotateY(180deg);
-   transition: transform 1s;
+  
+.is-not-flipped:hover{
+    transform: translateY(25%)
 }
 
 .button{

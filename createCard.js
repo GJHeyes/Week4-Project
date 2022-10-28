@@ -11,7 +11,7 @@ function createcard(card){
         bottom.src = card.images.small
         bottom.classList.add("bottom")
         div.append(bottom)
-        div.classList.add(`card`, 'computer'/*`${type.toLowerCase()}`*/)
+        div.classList.add(`card`, 'computer', 'is-not-flipped'/*`${type.toLowerCase()}`*/)
     }else{
         top.src = card.images.small
         div.classList.add(`card`, 'human')
