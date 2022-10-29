@@ -7,7 +7,8 @@ function reset(){
     playerCards.classList = ""
     playerDeck = {}
     computerDeck = {}
-    modifiedDeck = JSON.parse(JSON.stringify(fullDeck))
+    modifiedDeck = JSON.parse(JSON.stringify(fullDeck)).filter((i) => i.hasOwnProperty("attacks") === true && (i.attacks[0].damage !== "" && i.attacks[1] !== undefined && i.attacks[1].damage !== ""))
+
     playScore.innerText= playerScore
     compScore.innerText= computerScore
     playerChartHolder.classList.add("hidden")
