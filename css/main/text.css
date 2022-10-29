@@ -33,19 +33,20 @@
     height: 30vh;
 }
 
-h2{
+
+.scores{
+    display: flex !important;
     font-family: 'Pokemon Solid', sans-serif; 
     font-size: 2vw;
-    border: none;
-    margin:none;
-    padding:none;
 }
 #playerScore{
     color: #942010;
+    margin-bottom: 5px;
 }
 
 #computerScore{
     color: #083962;
+    margin-bottom: 5px;
 }
 
 .visuallyHidden{
