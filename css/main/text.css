@@ -1,0 +1,38 @@
+#result{
+    font-family: 'Pokemon Solid', sans-serif;
+    align-self: center;
+    justify-self: center;
+    color: #f6bd20;
+    transition: transform 1s;
+    font-size: 3vw;
+    letter-spacing: 10px;
+}
+
+#textHolder{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+}
+
+h2{
+    font-family: 'Pokemon Solid', sans-serif; 
+    display: flex;
+    font-size: 2vw;
+    border: none;
+    margin:none;
+    padding:none;
+}
+#humanScore{
+    position: relative;
+    left: 49%;
+    color: #942010;
+}
+
+#computerScore{
+    position: relative;
+    left: 49%;
+    color: #083962;
+}
