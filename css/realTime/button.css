@@ -1,14 +1,9 @@
 .button{
+    align-self: center;
+    font-family: 'Pokemon Solid', sans-serif;
     background-color: transparent;
-    background-repeat: no-repeat;
     border: none;
     cursor: pointer;
-    overflow: hidden;
-    outline: none;
-    font-family: 'Pokemon Solid', sans-serif;
-    position: fixed; 
-    top:45%;
-    left:40%;
     letter-spacing: 10px;
     padding: 5px;
     color:  #f6bd20;

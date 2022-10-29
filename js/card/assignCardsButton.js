@@ -7,12 +7,15 @@ assignCardsButton.addEventListener('click', (event)=>{
     assignCardsButton.disable = true;
     if(assignCardsButton.innerText !== "Loading..."){
         assignCardsButton.disable = false;
-        playChart.classList.remove("hidden")
-        compChart.classList.remove("hidden")
-        if(notClicked){
-            assignCardsButton.innerText = "Reset?"
+        playChart.classList = ""
+        compChart.classList = ""
+        
+        if(!startClicked){
+            startClicked = true
+            result.classList.remove('hidden')
             assignCardsButton.classList.add('hidden')
-            notClicked = false
+            assignCardsButton.innerText = "Reset?"
+            
             computerDeck = selectCards()
             playerDeck = selectCards()
         }else{

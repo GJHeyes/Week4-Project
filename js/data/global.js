@@ -3,13 +3,18 @@ const playerCards = document.querySelector("#playerCards")
 const compScore = document.getElementById('computerScore')
 const playScore = document.getElementById('humanScore')
 const result = document.getElementById('result')
+const computerPower = document.getElementById('computerPower')
+const playerPower = document.getElementById('playerPower')
+const trick = document.querySelectorAll(".visuallyShow")
 
 let resultOutcome = false
 let playerDeck
 let computerDeck 
 let fullDeck 
 let modifiedDeck;
-let notClicked = true
+let playerDamage;
+let computerDamage;
+let startClicked = false
 let stackingComputerDeck = true
 let numberOfCards = 6
 let playerSelect = []

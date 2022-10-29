@@ -1,25 +1,40 @@
 #result{
     font-family: 'Pokemon Solid', sans-serif;
     align-self: center;
-    justify-self: center;
+    transition: transform 1s;
     color: #f6bd20;
+    letter-spacing: 10px;
+    transition: all 3s linear;
+}
+
+.power{
+    font-family: 'Pokemon Solid', sans-serif;
     transition: transform 1s;
     font-size: 3vw;
     letter-spacing: 10px;
+    align-self: center;
+    transition: all 2s linear;
+}
+
+#playerPower{
+    color:#ff4100;
+}
+
+#computerPower{
+    color:#2062ac;
 }
 
 #textHolder{
     display: flex;
+    flex-direction: column;
+    justify-content: space-around; /*THE JUSTIFY SELF AS WELL AS ALIGN-CONTENT*/
     align-self: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     width: 100vw;
+    height: 40vh;
 }
 
 h2{
     font-family: 'Pokemon Solid', sans-serif; 
-    display: flex;
     font-size: 2vw;
     border: none;
     margin:none;
@@ -36,3 +51,21 @@ h2{
     left: 49%;
     color: #083962;
 }
+
+.visuallyHidden{
+    opacity: 0;
+    font-size: 2vw;
+}
+
+.enlarge{
+    font-size: 5vw;
+}
+
+.small{
+    font-size: 0vw;
+}
+
+.visuallyShow{
+    opacity: 100;
+}
+

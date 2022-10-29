@@ -7,8 +7,6 @@ body{
 }
 
 #main{
-    flex-direction: column;
     display: flex;
-    justify-content: space-between;
     height: 98vh;
 }
