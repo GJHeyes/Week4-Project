@@ -12,15 +12,12 @@ function findHighestAttack(card){
             attack:0,
         }]
     }
-    console.log(cardAttacks)
     
     for(let i = 0; i<3;i++){
         if(card.attacks.length >i){
             if(typeof card.attacks[i] != undefined){
                 cardAttacks.data[i].error = card.attacks[i].damage
-                cardAttacks.data[i].error = cardAttacks.data[i].error.replace("×", "")
-                cardAttacks.data[i].error = cardAttacks.data[i].error.replace("+", "")
-                cardAttacks.data[i].error = cardAttacks.data[i].error.replace("-", "")
+                cardAttacks.data[i].error = cardAttacks.data[i].error.replace("×", "").replace("+", "").replace("-", "")
                 cardAttacks.data[i].attack = Number(cardAttacks.data[i].error)
             }
         }
