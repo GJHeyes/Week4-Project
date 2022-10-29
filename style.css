@@ -1,5 +1,9 @@
+
 body{
-    background-color: #627bc5;
+    background-image: linear-gradient(to bottom left,rgb(32, 148, 131),#317b52);
+    background-repeat: no-repeat;
+    overflow:hidden;
+    height: 100vh;
 }
 
 div img{
@@ -40,11 +44,11 @@ div img{
 }
 
 .cards.pc{
-    background-color: #31414a;
+    background-image: linear-gradient(to  right,#2062ac,#083962);
 }
 
 .cards.user{
-    background-color: #29416a;
+    background-image: linear-gradient(to  left,#ff4100, #942010);
 }
 
 .card{
@@ -56,6 +60,7 @@ div img{
     text-align: center;
     margin: 5px;
     font-size: 2vw;
+    cursor:pointer;
 }
 
 img.bottom{
@@ -78,7 +83,7 @@ img.top{
 }
   
 .is-not-flipped:hover{
-    transform: translateY(25%)
+    transform: translateY(25%);
 }
 
 .card.human:hover{
@@ -88,25 +93,31 @@ img.top{
 
 
 .button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
     font-family: 'Pokemon Solid', sans-serif;
     position: fixed; 
     top:45%;
     left:40%;
     letter-spacing: 10px;
     padding: 5px;
-    background-color: #627bc5;
-    color: #d5eef6;
+    color:  #f6bd20;
     font-size: 5vw;
-    border: none;
+}
 
+.button:hover{
+    color: rgb(246, 230, 82);;
 }
 
 #result{
     font-family: 'Pokemon Solid', sans-serif;
     align-self: center;
     justify-self: center;
-
-    color: #d5eef6;
+    color: #f6bd20;
     transition: transform 1s;
     font-size: 3vw;
     letter-spacing: 10px;
@@ -132,13 +143,13 @@ h2{
 #humanScore{
     position: relative;
     left: 49%;
-    color: #31414a;
+    color: #942010;
 }
 
 #computerScore{
     position: relative;
     left: 49%;
-    color: #31414a;
+    color: #083962;
 }
 /*Chart CSS*/
 
@@ -175,4 +186,7 @@ h2{
     display: none;
 }
 
+.loading{
+    cursor:wait;
+}
 
