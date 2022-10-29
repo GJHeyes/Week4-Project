@@ -1,6 +1,4 @@
 function selectCards(){
-    modifiedDeck = modifiedDeck.filter((i) => i.hasOwnProperty("attacks") === true)
-    modifiedDeck = modifiedDeck.filter((i) => (i.attacks[0].damage !== "" && i.attacks[1] !== undefined && i.attacks[1].damage !== ""))
     let deck = []
     for(let i = 0; i < numberOfCards; i++){
         const cardNumber = Math.floor(Math.random()*modifiedDeck.length)
