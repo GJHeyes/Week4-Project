@@ -3,17 +3,24 @@ function delay(time) {
 }
   
 async function removeCard() {
-    await delay(1500);
+    await delay(2000);
     document.getElementById(computerSelect[0].id).remove()
     document.getElementById(playerSelect[0].id).remove()
+    result.classList="small"
     if(playerDeck.length === 0 && computerDeck.length === 0){
         computerCards.classList.add('hidden')
         playerCards.classList.add('hidden')
+        result.classList.add('hidden')
         assignCardsButton.classList.remove('hidden')
     }
-    result.innerText = ""
+    trick.forEach(tri => {
+        tri.classList = "power visuallyShow"
+    });
+    result.innerText=""
+    playerPower.innerText=""
+    computerPower.innerText= ""
     computerSelect = []
-    playerSelect = []
-    flip = false
-    resultOutcome = false
+    playerSelect  = []
+    flip= false
+    resultOutcome= false
 }

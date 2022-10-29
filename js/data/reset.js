@@ -1,7 +1,7 @@
 function reset(){
     playerScore = 0
     computerScore = 0
-    notClicked = true
+    startClicked = false
     stackingComputerDeck = true
     computerCards.classList = ""
     playerCards.classList = ""
