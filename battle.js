@@ -18,13 +18,13 @@ document.addEventListener('click', (e) =>{ //e for event
         }
     }
     if(computerSelect.length === 1 && playerSelect.length ===1 && scored === false){
-        let computerHealth = Number(computerSelect[0].hp)
-        let playerHealth = Number(playerSelect[0].hp)
-        if(computerHealth > playerHealth){
+        let computerDamage = findHighestAttack(computerSelect[0])
+        let playerDamage = findHighestAttack(playerSelect[0])
+        if(computerDamage > playerDamage){
             computerScore++
             result.innerText = "Computer Wins!"
 
-        }else if(computerHealth === playerHealth){
+        }else if(computerDamage === playerDamage){
             computerScore++
             playerScore++
             result.innerText = "Draw!"

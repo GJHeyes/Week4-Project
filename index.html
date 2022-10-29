@@ -13,6 +13,7 @@
     <script src="isFlipped.js" defer></script>
     <script src="reset.js" defer></script>
     <script src="battle.js" defer></script>
+    <script src="findHighestAttack.js" defer></script>
     <script src="chart.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
@@ -25,8 +26,7 @@
         <div class = "hidden" id="computerChartHolder">
             <div class = "computer-container">
                 <h2 id="computerScore"></h2>
-            <!-- <p>Donut chart</p> -->
-            <canvas id="computerChart" width="400" height="400"></canvas>
+                <canvas id="computerChart" width="400" height="400"></canvas>
             </div>
         </div>
         <div class="cardHolder computer">
@@ -43,10 +43,8 @@
         </div>
         <div class = "hidden" id="playerChartHolder">
             <div class = "human-container">
-            
-            <!-- <p>Donut chart</p> -->
-            <canvas id="playerChart" width="400" height="400"></canvas>
-            <h2 id="humanScore"></h2>
+                <canvas id="playerChart" width="400" height="400"></canvas>
+                <h2 id="humanScore"></h2>
             </div>
         </div>
     </div>
