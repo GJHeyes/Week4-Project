@@ -1,6 +1,7 @@
 const playChart = document.getElementById("playerChartHolder")
 const compChart = document.getElementById("computerChartHolder")
 const assignCardsButton = document.querySelector("#cardButton")
+
 assignCardsButton.addEventListener('click', (event)=>{
     event.preventDefault()
     assignCardsButton.disable = true;
@@ -12,7 +13,8 @@ assignCardsButton.addEventListener('click', (event)=>{
             assignCardsButton.innerText = "Reset?"
             assignCardsButton.classList.add('hidden')
             notClicked = false
-            deskAssign()
+            computerDeck = selectCards()
+            playerDeck = selectCards()
         }else{
             assignCardsButton.innerText = "Start!"
             reset()

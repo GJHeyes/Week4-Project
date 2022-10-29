@@ -1,5 +1,3 @@
-let scored = false
-
 document.addEventListener('click', (e) =>{ //e for event
     let cardId = e.target.parentNode.id
     let cardClass = e.target.parentNode.classList
@@ -17,14 +15,14 @@ document.addEventListener('click', (e) =>{ //e for event
             }
         }
     }
-    if(computerSelect.length === 1 && playerSelect.length ===1 && scored === false){
-        let computerHealth = Number(computerSelect[0].hp)
-        let playerHealth = Number(playerSelect[0].hp)
-        if(computerHealth > playerHealth){
+    if(computerSelect.length === 1 && playerSelect.length ===1 && resultOutcome === false){
+        let computerDamage = findHighestAttack(computerSelect[0])
+        let playerDamage = findHighestAttack(playerSelect[0])
+        if(computerDamage > playerDamage){
             computerScore++
             result.innerText = "Computer Wins!"
 
-        }else if(computerHealth === playerHealth){
+        }else if(computerDamage === playerDamage){
             computerScore++
             playerScore++
             result.innerText = "Draw!"
@@ -32,15 +30,18 @@ document.addEventListener('click', (e) =>{ //e for event
             playerScore++//h2 inner text
             result.innerText = "You Win!"
         }  
-        scored = true
+        resultOutcome = true
+
         playerDeck = playerDeck.filter((i) => i.id !== playerSelect[0].id)
         computerDeck = computerDeck.filter((i) => i.id !== computerSelect[0].id)
+
         playScore.innerText= playerScore
         compScore.innerText= computerScore
+        
         updateScore()
         removeCard()
 
-        if(playerDeck.length === 0 && computerDeck.length === 0){
+        if(playerDeck.length === 0){
             if(computerScore > playerScore){
                 result.innerText = "Computer Won The Match!"
             }
@@ -49,32 +50,9 @@ document.addEventListener('click', (e) =>{ //e for event
             }else{
                 result.innerText = "You Won The Match!"
             } 
-        }
-        
+        }    
     }
 })
-
-function delay(time) {
-    return new Promise(resolve => setTimeout(resolve, time));
-  }
-  
-async function removeCard() {
-    await delay(1500);
-    document.getElementById(computerSelect[0].id).remove()
-    document.getElementById(playerSelect[0].id).remove()
-    if(playerDeck.length === 0 && computerDeck.length === 0){
-        computerCards.classList.add('hidden')
-        playerCards.classList.add('hidden')
-        assignCardsButton.classList.remove('hidden')
-    }
-    result.innerText = ""
-    computerSelect = []
-    playerSelect = []
-    flip = false
-    scored = false
-   
-    //h2 innertext  = ""
-}
 
 
 

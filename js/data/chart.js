@@ -11,7 +11,7 @@ const computerChart = new Chart(c0mputer, {
 
             ],
             backgroundColor: [
-                'rgba(49, 65, 74,1)',
+                'rgb(8, 57, 98)',
             ],
             borderColor: [
                 'rgba(220, 99, 132, 0.0)',
@@ -76,7 +76,7 @@ const playerChart = new Chart(play3r, {
 
             ],
             backgroundColor: [
-                'rgba(41, 65, 106,1)',
+                'rgb(148, 32, 16)',
             ],
             borderColor: [
                 'rgba(54, 162, 205, 0.0)',
@@ -132,10 +132,4 @@ const playerChart = new Chart(play3r, {
     //plugins: [ChartDataLabels]
 });
 
-function updateScore(){
-    playerChart.config.data.datasets[0].data[0] = playerScore 
-    computerChart.config.data.datasets[0].data[0] = computerScore 
-    playerChart.update()
-    computerChart.update()
-}
 
