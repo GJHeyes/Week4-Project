@@ -1,6 +1,7 @@
 const playChart = document.getElementById("playerChartHolder")
 const compChart = document.getElementById("computerChartHolder")
 const assignCardsButton = document.querySelector("#cardButton")
+
 assignCardsButton.addEventListener('click', (event)=>{
     event.preventDefault()
     assignCardsButton.disable = true;

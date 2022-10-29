@@ -5,5 +5,6 @@ async function cardLoad(){
     fullDeck = _data.data
     modifiedDeck = _data.data
     assignCardsButton.innerText = "Start!"
+    assignCardsButton.classList.remove("loading")
 }
 
