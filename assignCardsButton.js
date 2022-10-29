@@ -12,7 +12,8 @@ assignCardsButton.addEventListener('click', (event)=>{
             assignCardsButton.innerText = "Reset?"
             assignCardsButton.classList.add('hidden')
             notClicked = false
-            deskAssign()
+            computerDeck = selectCards()
+            playerDeck = selectCards()
         }else{
             assignCardsButton.innerText = "Start!"
             reset()
