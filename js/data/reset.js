@@ -3,18 +3,14 @@ function reset(){
     computerScore = 0
     startClicked = false
     stackingComputerDeck = true
-    computerCards.classList = ""
-    playerCards.classList = ""
     playerDeck = {}
     computerDeck = {}
     modifiedDeck = JSON.parse(JSON.stringify(fullDeck)).filter((i) => i.hasOwnProperty("attacks") === true && (i.attacks[0].damage !== "" && i.attacks[1] !== undefined && i.attacks[1].damage !== ""))
 
     playScore.innerText= playerScore
     compScore.innerText= computerScore
-    playerChartHolder.classList.add("hidden")
-    computerChartHolder.classList.add("hidden")
-    computerCards.classList.remove('hidden')
-    playerCards.classList.remove('hidden')
+    playChartHolder.classList.add("hidden")
+    compChartHolder.classList.add("hidden")
     updateScore()
     while (computerCards.hasChildNodes()) {
         computerCards.removeChild(computerCards.firstChild)

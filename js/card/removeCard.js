@@ -8,6 +8,8 @@ async function removeCard() {
     document.getElementById(playerSelect[0].id).remove()
     result.classList="small"
     if(playerDeck.length === 0 && computerDeck.length === 0){
+        playChartHolder.classList.add('hidden')
+        compChartHolder.classList.add('hidden')
         computerCards.classList.add('hidden')
         playerCards.classList.add('hidden')
         result.classList.add('hidden')

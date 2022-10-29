@@ -6,19 +6,15 @@ div img{
 .cardHolder{
     display: flex;
     align-items: center;
+    width: fit-content;
 }
 
 .cardHolder.player{
-    justify-content: flex-end;
-    position: fixed;
-    left: 10px;
-    bottom: 10px;
+    align-self: flex-end !important;
 }
 
 .cardHolder.computer{
-    justify-content: flex-end;
-    position: fixed;
-    right: 10px
+    align-self: flex-start !important;
 }
 
 .cards{

@@ -4,7 +4,7 @@
     transition: transform 1s;
     color: #f6bd20;
     letter-spacing: 10px;
-    transition: all 3s linear;
+    transition: all 5s linear;
 }
 
 .power{
@@ -30,7 +30,7 @@
     justify-content: space-around; /*THE JUSTIFY SELF AS WELL AS ALIGN-CONTENT*/
     align-self: center;
     width: 100vw;
-    height: 40vh;
+    height: 30vh;
 }
 
 h2{
@@ -40,15 +40,11 @@ h2{
     margin:none;
     padding:none;
 }
-#humanScore{
-    position: relative;
-    left: 49%;
+#playerScore{
     color: #942010;
 }
 
 #computerScore{
-    position: relative;
-    left: 49%;
     color: #083962;
 }
 

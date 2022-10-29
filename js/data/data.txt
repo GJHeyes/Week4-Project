@@ -1,4 +1,4 @@
-const pokemon = {
+{
     "data": [
     {
     "id": "pl1-1",
@@ -28423,4 +28423,4 @@ const pokemon = {
     "pageSize": 250,
     "count": 250,
     "totalCount": 15314
-    }
+}
