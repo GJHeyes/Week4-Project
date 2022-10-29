@@ -12,7 +12,6 @@ function findHighestAttack(card){
             attack:0,
         }]
     }
-    console.log(cardAttacks)
     
     for(let i = 0; i<3;i++){
         if(card.attacks.length >i){
