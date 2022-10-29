@@ -1,7 +1,5 @@
-const c0mputer = document.getElementById('computerChart').getContext('2d');
-const play3r = document.getElementById('playerChart').getContext('2d');
 
-const computerChart = new Chart(c0mputer, {
+const computerChart = new Chart(compChart, {
     type: 'bar',
     data: {
         labels: [''],
@@ -66,7 +64,7 @@ const computerChart = new Chart(c0mputer, {
     //plugins: [ChartDataLabels]
 });
 
-const playerChart = new Chart(play3r, {
+const playerChart = new Chart(playChart, {
     type: 'bar',
     data: {
         labels: [''],

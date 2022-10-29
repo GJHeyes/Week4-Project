@@ -1,5 +1,3 @@
-const playChart = document.getElementById("playerChartHolder")
-const compChart = document.getElementById("computerChartHolder")
 const assignCardsButton = document.querySelector("#cardButton")
 
 assignCardsButton.addEventListener('click', (event)=>{
@@ -7,11 +5,12 @@ assignCardsButton.addEventListener('click', (event)=>{
     assignCardsButton.disable = true;
     if(assignCardsButton.innerText !== "Loading..."){
         assignCardsButton.disable = false;
-        playChart.classList = ""
-        compChart.classList = ""
-        
+        playChartHolder.classList.remove("hidden")
+        compChartHolder.classList.remove("hidden")    
         if(!startClicked){
             startClicked = true
+            computerCards.classList.remove('hidden')
+            playerCards.classList.remove('hidden')
             result.classList.remove('hidden')
             assignCardsButton.classList.add('hidden')
             assignCardsButton.innerText = "Reset?"

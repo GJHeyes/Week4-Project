@@ -18,7 +18,6 @@
     <script src="../js/data/chart.js" defer></script>
     <link rel="stylesheet" href="../css/realTime/button.css">
     <link rel="stylesheet" href="../css/card/card.css">
-    <link rel="stylesheet" href="../css/card/cardContainer.css">
     <link rel="stylesheet" href="../css/realTime/chart.css">
     <link rel="stylesheet" href="../css/main/body.css">
     <link rel="stylesheet" href="../css/main/text.css">
@@ -30,14 +29,14 @@
 </head>
 <body>
     <div id="main">
-        <div class = "hidden" id="computerChartHolder">
-            <div class = "computer-container">
+        <div id="contentTop" class="contentHolder">
+            <div id = "computer-container" class="hidden container">
                 <h2 id="computerScore"></h2>
                 <canvas id="computerChart" width="400" height="400"></canvas>
             </div>
-        </div>
-        <div class="cardHolder computer">
-            <div id="computerCards">
+            <div class="cardHolder computer">
+                <div id="computerCards">
+                </div>
             </div>
         </div>
         <div id="textHolder">
@@ -46,15 +45,14 @@
             <button type="submit" id="cardButton" class="button loading">Loading...</button>
             <h2 id="playerPower" class="power visuallyShow"></h2>
         </div>
-        </div>
-        <div class="cardHolder player">
-            <div id="playerCards">
+        <div id="contentBottom" class="contentHolder">
+            <div class="cardHolder player">
+                <div id="playerCards">
+                </div>
             </div>
-        </div>
-        <div class = "hidden" id="playerChartHolder">
-            <div class = "human-container">
-                <canvas id="playerChart" width="400" height="400"></canvas>
-                <h2 id="humanScore"></h2>
+            <div id = "player-container"class = "hidden container" >
+                <canvas id="playerChart" class="charts"></canvas>
+                <h2 id="playerScore"></h2>
             </div>
         </div>
     </div>
