@@ -1,0 +1,24 @@
+.is-flipped{
+    transform: rotateY(180deg);
+    transition: transform 1s;
+ }
+
+.is-flipped:hover{
+    transform: translateY(25%) rotateY(180deg);
+}
+  
+.is-not-flipped:hover{
+    transform: translateY(25%);
+}
+
+.card.human:hover{
+    transform: translateY(-25%)
+}
+
+.hidden {
+    display: none;
+}
+
+.loading{
+    cursor:wait;
+}
