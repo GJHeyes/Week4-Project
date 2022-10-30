@@ -1,5 +1,5 @@
 
-function createcard(card, row){
+function createcard(card){
     const div = document.createElement("div")
     const top = document.createElement("img")
     const bottom = document.createElement("img")
@@ -12,10 +12,10 @@ function createcard(card, row){
         bottom.src = card.images.small
         bottom.classList.add("bottom")
         div.append(bottom)
-        div.classList.add(`card`, 'cpu', 'is-not-flipped', row/*`${type.toLowerCase()}`*/)
+        div.classList.add(`card`, 'cpu', 'is-not-flipped'/*`${type.toLowerCase()}`*/)
     }else{
         top.src = card.images.small
-        div.classList.add(`card`, 'human', row)
+        div.classList.add(`card`, 'human')
     }
     div.append(top)
     return div

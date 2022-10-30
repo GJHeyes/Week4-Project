@@ -121,26 +121,22 @@
         align-self: center;
         padding: 2px;
     }
-    .card{
-        margin-left: 6px;
-        margin-right:6px;
-    }
-    .player{
-        transform: rotateX(180deg) !important;
-    }
-    .human{
-        transform: rotateX(180deg) !important;
     
-    }
-    .card.row1{
-        z-index: 99 !important; 
+    .player, .human{
+        transform: rotateX(180deg) !important;
     }
     .human:hover{
         transform:rotateX(180deg) translateY(-25%) !important
     }
-    #contentTop,#contentBottom{
+    #contentTop{
         margin-left: 0vw;
         margin-right: 0vw;
+        margin-top: 65px;
+    }
+    #contentBottom{
+        margin-left: 0vw;
+        margin-right: 0vw;
+        margin-bottom: 65px;
     }
     .card, img.bottom, img.top, div img{
         width: calc((100vw - 68px) / 4)
@@ -151,7 +147,7 @@
     canvas {
         /*height: calc(100vw - 20px) !important;*/
         width: calc(100vw - 20px) !important;
-        height: 5vh !important;
+        height: 15vh !important;
     }
     #playerScore {
         margin-bottom: 20px;
@@ -160,20 +156,20 @@
         margin-top: 20px;
     }
     #textHolder{
-        height: 5vh
+        height: 20vh
     }
     .enlarge{
-        font-size: 4vw;
+        font-size: 3vw;
     }
     .small{
-        font-size: 2vw;
+        font-size: 3vw;
     }
     .power{
         font-size: 3vw;
     }
     .visuallyHidden{
         opacity: 0;
-        font-size: 3vw;
+        font-size: 0vw;
     }
 
 .visuallyHidden{
