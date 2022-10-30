@@ -10,6 +10,7 @@ const compChart = document.getElementById('computerChart').getContext('2d');
 const playChart = document.getElementById('playerChart').getContext('2d');
 const compChartHolder = document.getElementById('computer-container')
 const playChartHolder = document.getElementById('player-container')
+const assignCardsButton = document.querySelector("#cardButton")
 let numberOfCards
 if(window.matchMedia("(max-width: 480px)").matches){
     numberOfCards = 4

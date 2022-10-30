@@ -1,4 +1,4 @@
-const assignCardsButton = document.querySelector("#cardButton")
+
 
 assignCardsButton.addEventListener('click', (event)=>{
     event.preventDefault()
