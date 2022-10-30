@@ -176,3 +176,72 @@
     opacity: 100;
 }
 }
+@media (max-height: 667px) and (max-width: 480px){
+.contentHolder{
+    flex-direction: column-reverse;
+}
+.cardHolder{
+    width:-webkit-fill-available;
+    justify-content: center;
+}
+.cards{
+    justify-content: space-evenly;
+    align-self: center;
+    padding: 2px;
+}
+
+.player, .human{
+    transform: rotateX(180deg) !important;
+}
+.human:hover{
+    transform:rotateX(180deg) translateY(-25%) !important
+}
+#contentTop{
+    margin-left: 0vw;
+    margin-right: 0vw;
+    margin-top: 30px;
+}
+#contentBottom{
+    margin-left: 0vw;
+    margin-right: 0vw;
+    margin-bottom: 30px;
+}
+.card, img.bottom, img.top, div img{
+    width: calc((100vw - 68px) / 4)
+}
+.container{
+    align-self: center;
+    height: 15vh;
+}
+canvas {
+    /*height: calc(100vw - 20px) !important;*/
+    width: calc(100vw - 20px) !important;
+    height: 10vh !important;
+}
+#playerScore {
+    margin-bottom: 20px;
+}
+#computerScore{
+    margin-top: 20px;
+}
+#textHolder{
+    height: 20vh
+}
+.enlarge{
+    font-size: 3vw;
+}
+.small{
+    font-size: 3vw;
+}
+.power{
+    font-size: 3vw;
+}
+.visuallyHidden{
+    opacity: 0;
+    font-size: 0vw;
+}
+
+.visuallyHidden{
+opacity: 100;
+}
+}
