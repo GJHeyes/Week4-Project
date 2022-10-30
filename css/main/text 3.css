@@ -1,0 +1,68 @@
+#result{
+    font-family: 'Pokemon Solid', sans-serif;
+    align-self: center;
+    transition: transform 1s;
+    color: #f6bd20;
+    letter-spacing: 10px;
+    transition: all 5s linear;
+}
+
+.power{
+    font-family: 'Pokemon Solid', sans-serif;
+    transition: transform 1s;
+    font-size: 3vw;
+    letter-spacing: 10px;
+    align-self: center;
+    transition: all 2s linear;
+}
+
+#playerPower{
+    color:#ff4100;
+}
+
+#computerPower{
+    color:#2062ac;
+}
+
+#textHolder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /*THE JUSTIFY SELF AS WELL AS ALIGN-CONTENT*/
+    align-self: center;
+    width: 100vw;
+    height: 30vh;
+}
+
+
+.scores{
+    display: flex !important;
+    font-family: 'Pokemon Solid', sans-serif; 
+    font-size: 2vw;
+}
+#playerScore{
+    color: #942010;
+    margin-bottom: 5px;
+}
+
+#computerScore{
+    color: #083962;
+    margin-bottom: 5px;
+}
+
+.visuallyHidden{
+    opacity: 0;
+    font-size: 2vw;
+}
+
+.enlarge{
+    font-size: 5vw;
+}
+
+.small{
+    font-size: 0vw;
+}
+
+.visuallyShow{
+    opacity: 100;
+}
+

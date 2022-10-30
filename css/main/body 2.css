@@ -1,0 +1,29 @@
+body{
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom left,rgb(32, 148, 131),#317b52);
+    background-repeat: no-repeat;
+    overflow:hidden;
+    margin: 0;
+    padding:  10px !important;
+    ;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 20px);
+    justify-content: space-between;
+}
+
+.contentHolder{
+    display: flex;
+    justify-content: space-between;
+}
+
+#contentTop{
+    margin-left: 6vw;
+}
+
+#contentBottom{
+    margin-right: 6vw;
+}
