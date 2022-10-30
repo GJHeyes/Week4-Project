@@ -1,0 +1,55 @@
+div img{
+    width: 10vw;
+    transition: transform 0.5s;
+}
+
+.cardHolder{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.cardHolder.player{
+    align-self: flex-end !important;
+}
+
+.cardHolder.computer{
+    align-self: flex-start !important;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.cards.pc{
+    background-image: linear-gradient(to  right,#2062ac,#083962);
+}
+
+.cards.user{
+    background-image: linear-gradient(to  left,#ff4100, #942010);
+}
+
+.card{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    position:relative;
+    display: flex;
+    align-self: center;
+    text-align: center;
+    margin: 5px;
+    font-size: 2vw;
+    cursor:pointer;
+}
+
+img.bottom{
+    transform: rotateY(180deg) ;
+    backface-visibility: hidden;
+}
+
+img.top{
+    backface-visibility: hidden;
+    position: absolute
+}

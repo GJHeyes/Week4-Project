@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+}
+
+#computerChart{
+    transform: rotateX(180deg)
+}
+
+canvas{
+    height: 20vh !important;
+    width: 20vw !important;
+}
+
+.computer-container {
+    width: 25vw;
+}
+
+.player-container{
+    align-self: flex-end;
+    width: 25vw;
+}
+
+
+
+
+

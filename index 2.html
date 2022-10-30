@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/data/global.js" defer></script>
+    <script src="../js/card/removeCard.js" defer></script>
+    <script src="../js/card/cardLoad.js" defer></script>
+    <script src="../js/card/createCard.js" defer></script>
+    <script src="../js/card/assignCardsButton.js" defer></script>
+    <script src="../js/card/selectCards.js" defer></script>
+    <script src="../js/transitions/isFlipped.js" defer></script>
+    <script src="../js/data/reset.js" defer></script>
+    <script src="../js/battle/battle.js" defer></script>
+    <script src="../js/battle/findHighestAttack.js" defer></script>
+    <script src="../js/battle/updateScore.js" defer></script>
+    <script src="../js/data/chart.js" defer></script>
+    <link rel="stylesheet" href="../css/realTime/button.css">
+    <link rel="stylesheet" href="../css/card/card.css">
+    <link rel="stylesheet" href="../css/realTime/chart.css">
+    <link rel="stylesheet" href="../css/main/body.css">
+    <link rel="stylesheet" href="../css/main/text.css">
+    <link rel="stylesheet" href="../css/main/mediaQuieries.css">
+    <link rel="stylesheet" href="../css/realTime/transitions.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js" integrity="sha512-Tfw6etYMUhL4RTki37niav99C6OHwMDB2iBT5S5piyHO+ltK2YX8Hjy9TXxhE1Gm/TmAV0uaykSpnHKFIAif/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Pokémon Card Game</title>
+</head>
+<body>
+    <div id="main">
+        <div id="contentTop" class="contentHolder">
+            <div id = "computer-container" class="hidden container">
+                <div id="computerScore" class="scores"></div>
+                <canvas id="computerChart" width="400" height="400"></canvas>
+            </div>
+            <div class="cardHolder computer">
+                <div id="computerCards">
+                </div>
+            </div>
+        </div>
+        <div id="textHolder">
+            <h2 id="computerPower" class="power visuallyShow"></h2>
+            <h1 id="result" class="hidden small"></h1>
+            <button type="submit" id="cardButton" class="button loading">Loading...</button>
+            <h2 id="playerPower" class="power visuallyShow"></h2>
+        </div>
+        <div id="contentBottom" class="contentHolder">
+            <div class="cardHolder player">
+                <div id="playerCards">
+                </div>
+            </div>
+            <div id = "player-container"class = "hidden container" >
+                <canvas id="playerChart" class="charts"></canvas>
+                <div id="playerScore" class="scores"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
