@@ -109,6 +109,14 @@
 /*can i add a modifier?*/
 /*Phone*/
 @media (max-width: 480px){
+    body{
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+    #main{
+        height: calc(80vh);
+    }
     .contentHolder{
         flex-direction: column-reverse;
     }
@@ -131,12 +139,10 @@
     #contentTop{
         margin-left: 0vw;
         margin-right: 0vw;
-        margin-top: 65px;
     }
     #contentBottom{
         margin-left: 0vw;
         margin-right: 0vw;
-        margin-bottom: 65px;
     }
     .card, img.bottom, img.top, div img{
         width: calc((100vw - 68px) / 4)
@@ -177,6 +183,14 @@
 }
 }
 @media (max-height: 667px) and (max-width: 480px){
+    body{
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+    #main{
+        height: calc(80vh);
+    }
 .contentHolder{
     flex-direction: column-reverse;
 }
@@ -199,19 +213,17 @@
 #contentTop{
     margin-left: 0vw;
     margin-right: 0vw;
-    margin-top: 30px;
 }
 #contentBottom{
     margin-left: 0vw;
     margin-right: 0vw;
-    margin-bottom: 30px;
 }
 .card, img.bottom, img.top, div img{
     width: calc((100vw - 68px) / 4)
 }
 .container{
     align-self: center;
-    height: 15vh;
+    height: 10vh;
 }
 canvas {
     /*height: calc(100vw - 20px) !important;*/
@@ -225,7 +237,7 @@ canvas {
     margin-top: 20px;
 }
 #textHolder{
-    height: 20vh
+    height: 15vh
 }
 .enlarge{
     font-size: 3vw;
