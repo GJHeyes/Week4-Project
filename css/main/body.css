@@ -1,6 +1,7 @@
+html {background-image: linear-gradient(to bottom left,rgb(32, 148, 131),#317b52);}
 body{
     box-sizing: border-box;
-    background-image: linear-gradient(to bottom left,rgb(32, 148, 131),#317b52);
+    justify-content: center;
     background-repeat: no-repeat;
     overflow:hidden;
     margin: 0;
